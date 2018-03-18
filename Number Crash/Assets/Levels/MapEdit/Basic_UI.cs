@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 
 namespace MainLogic.UI
 {
@@ -32,9 +32,15 @@ namespace MainLogic.UI
 
         protected List<ChessNode> highLightNodes = new List<ChessNode>();
 
-        private RaycastHit hit;   //temp
         public RaycastHit Click(LayerMask layer)
         {
+            RaycastHit hit = new RaycastHit();
+#if ANDROID
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) return hit;
+#else
+            if (EventSystem.current.IsPointerOverGameObject()) return hit;
+#endif
+
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layer);
             if (hit.transform != null)
             {

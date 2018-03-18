@@ -470,7 +470,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentNode: {fileID: 0}
   pointer: {fileID: 2102839738}
-  playerGroup: 1
   posText: {fileID: 238741604}
 --- !u!1 &328066612
 GameObject:
@@ -1200,7 +1199,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -1423,7 +1422,7 @@ MonoBehaviour:
   size: {x: 1, y: 1}
   sideLength: 0.85
   mapAsset: {fileID: 4900000, guid: 3303d5135a21c1147a52c59aa88d8b72, type: 3}
-  importOnAwake: 1
+  importOnAwake: 0
   basic: {fileID: 1243892675828514, guid: f6baebe4083121b4c99d0c96d4ed4531, type: 2}
   quick: {fileID: 1848624787631194, guid: e425bcea270faff4080d0ae64472e64d, type: 2}
   camp: {fileID: 1556013946402744, guid: a11b0699cacde554897979bb2b196226, type: 2}
