@@ -35,6 +35,7 @@ namespace MainLogic.UI
         public RaycastHit Click(LayerMask layer)
         {
             RaycastHit hit = new RaycastHit();
+
 #if ANDROID
             if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) return hit;
 #else
