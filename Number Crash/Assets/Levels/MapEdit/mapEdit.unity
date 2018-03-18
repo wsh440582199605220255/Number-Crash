@@ -891,6 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeType: 4
+  mySprite: {fileID: 0}
 --- !u!1 &892089648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeType: 1
+  mySprite: {fileID: 0}
 --- !u!1 &1052814787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeType: 3
+  mySprite: {fileID: 0}
 --- !u!1 &1394190414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeType: 2
+  mySprite: {fileID: 0}
 --- !u!1 &1615430385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,6 +2211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeType: 0
+  mySprite: {fileID: 0}
 --- !u!1 &1779314308
 GameObject:
   m_ObjectHideFlags: 0

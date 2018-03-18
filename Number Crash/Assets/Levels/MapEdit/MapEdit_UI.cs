@@ -9,6 +9,7 @@ namespace MainLogic.UI
     {
         public Text posText;
 
+
         private Vector3 mpLastFrame;
         private bool rmDown = false;
         private float cameraMoveRate;
@@ -23,7 +24,18 @@ namespace MainLogic.UI
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
+            {
+                RaycastHit hit = Click(QuadMap.nodeLayer);
+                if (hit.transform)
+                {
+                    CurrentNode = hit.transform.GetComponent<ChessNode>();
+                    CurrentNode.GetComponent<SpriteRenderer>().sprite = MapEdit_Panel.CurrPanel.mySprite;
+                    CurrentNode.type = MapEdit_Panel.CurrPanel.nodeType;
+                }
+            }
+
+            if (Input.GetMouseButtonDown(2))
             {
                 RaycastHit hit = Click(QuadMap.nodeLayer);
                 if (hit.transform)

@@ -40,7 +40,6 @@ namespace MainLogic.UI
 #else
             if (EventSystem.current.IsPointerOverGameObject()) return hit;
 #endif
-
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity, layer);
             if (hit.transform != null)
             {
