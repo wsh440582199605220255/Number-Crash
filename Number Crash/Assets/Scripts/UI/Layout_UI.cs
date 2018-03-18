@@ -6,10 +6,17 @@ namespace MainLogic.UI
     public class Layout_UI : Basic_UI
     {
         public static Layout_UI PUBLIC;
+        public GameObject layoutCpButton;
 
         private void Awake()
         {
             PUBLIC = this;
+        }
+
+        private void OnEnable()
+        {
+            GameManagement.PUBLIC.EnableHide();
+            layoutCpButton.SetActive(true);
         }
 
         public void Completed()

@@ -1683,6 +1683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentNode: {fileID: 0}
   pointer: {fileID: 2102839738}
+  layoutCpButton: {fileID: 1775386241}
 --- !u!1 &348414449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6913,7 +6914,6 @@ MonoBehaviour:
   players: 01000000feffffff
   ais: []
   hideMode: 1
-  layoutCpButton: {fileID: 1775386241}
   messageText: {fileID: 352114999}
   networkMode: 1
 --- !u!1 &1416871415

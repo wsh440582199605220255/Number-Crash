@@ -29,8 +29,6 @@ namespace MainLogic
             full,
         }
         private bool isEnded = false;
-
-        public GameObject layoutCpButton;
         public Text messageText;
         #region Network
 
@@ -91,6 +89,12 @@ namespace MainLogic
 
         public void EnableLayout()
         {
+            messageText.text = "";           
+            Layout_UI.PUBLIC.enabled = true;
+        }
+
+        public void EnableHide()
+        {
             if (hideMode != HideMode.none)
             {
                 foreach (var item in gDic)
@@ -101,10 +105,6 @@ namespace MainLogic
                         if (IsOpposite(item.Key, playerGroup)) foreach (var item1 in item.Value) item1.HideNumber();
                 }
             }
-
-            messageText.text = "";
-            layoutCpButton.SetActive(true);
-            Layout_UI.PUBLIC.enabled = true;
         }
 
         public void MyLayoutCompleted()

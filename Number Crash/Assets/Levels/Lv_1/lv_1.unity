@@ -1365,6 +1365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentNode: {fileID: 0}
   pointer: {fileID: 2102839738}
+  layoutCpButton: {fileID: 1775386241}
 --- !u!1001 &375888441
 Prefab:
   m_ObjectHideFlags: 0
@@ -6373,7 +6374,6 @@ MonoBehaviour:
   ais:
   - {fileID: 1858639836}
   hideMode: 1
-  layoutCpButton: {fileID: 0}
   messageText: {fileID: 52420716}
   networkMode: 0
 --- !u!1 &1397485587
