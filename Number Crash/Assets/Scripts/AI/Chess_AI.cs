@@ -33,7 +33,7 @@ namespace MainLogic.AI
         /// </summary>
         public abstract void StartUp();
 
-        protected static bool IsOpposite(Group g1, Group g2)
+        public static bool IsOpposite(Group g1, Group g2)
         {
             return ((int)g1 * (int)g2 < 0);
         }

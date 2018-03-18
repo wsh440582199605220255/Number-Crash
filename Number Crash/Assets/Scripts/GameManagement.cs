@@ -21,7 +21,13 @@ namespace MainLogic
         public List<Group> players = new List<Group>();
         public List<AI.Chess_AI> ais = new List<AI.Chess_AI>(3);
 
-        public bool hideMode = false;
+        public HideMode hideMode = HideMode.full;
+        public enum HideMode
+        {
+            none,
+            only_opposite,
+            full,
+        }
         private bool isEnded = false;
 
         public GameObject layoutCpButton;
@@ -29,14 +35,6 @@ namespace MainLogic
         #region Network
 
         [SerializeField] private bool networkMode = false;
-        /// <summary>
-        /// Check the network vaild
-        /// </summary>
-        public bool CheckNetwork()
-        {
-            if (networkMode == false) return false;
-            return true;
-        }
 
         //a player complete his layout
         public void CompleteGroupLayout(CmdData data)
@@ -93,11 +91,14 @@ namespace MainLogic
 
         public void EnableLayout()
         {
-            if (hideMode)
+            if (hideMode != HideMode.none)
             {
                 foreach (var item in gDic)
                 {
-                    if (item.Key != playerGroup) foreach (var item1 in item.Value) item1.HideNumber();
+                    if (hideMode == HideMode.full)
+                        if (item.Key != playerGroup) foreach (var item1 in item.Value) item1.HideNumber();
+                    if (hideMode == HideMode.only_opposite)
+                        if (IsOpposite(item.Key, playerGroup)) foreach (var item1 in item.Value) item1.HideNumber();
                 }
             }
 
@@ -108,7 +109,7 @@ namespace MainLogic
 
         public void MyLayoutCompleted()
         {
-            if (CheckNetwork())
+            if (networkMode)
             {
                 List<ChessData> datas = new List<ChessData>(gDic[playerGroup].Count);
                 foreach (var item in gDic[playerGroup])
@@ -133,7 +134,7 @@ namespace MainLogic
 
         public void NextStep(ChessAction act)
         {
-            if (!act.IsNULL() && CheckNetwork() && step > 0) Socket_Client.SendChessAction(act);
+            if (!act.IsNULL() && networkMode && step > 0) Socket_Client.SendChessAction(act);
             if (isEnded) return;
             step++;
 
@@ -197,6 +198,11 @@ namespace MainLogic
             Player_UI.PUBLIC.enabled = false;
             messageText.text = "Player [" + players[0].ToString() + "] is the winner!";
             Debug.Log("The end.");
+        }
+
+        public static bool IsOpposite(Group g1, Group g2)
+        {
+            return ((int)g1 * (int)g2 < 0);
         }
     }
 }
