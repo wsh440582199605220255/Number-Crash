@@ -9,6 +9,7 @@ namespace MainLogic.AI
         {
             List<ChessNode> nodes = null;
 
+            //get a random chess which can move
             Chess item = null;
             while (nodes == null || nodes.Count == 0)
             {
@@ -16,8 +17,8 @@ namespace MainLogic.AI
                 item = myChess[i];
                 nodes = item.ConnectedNodes();
             }
-
             int j = Random.Range(0, nodes.Count - 1);
+
             //pre data
             ChessAction act = new ChessAction(item.Pos, nodes[j].pos);
             CType myType = item.type;
