@@ -125,6 +125,8 @@ namespace MainLogic
 
         public void GameStart()
         {
+            for (int i = 0; i < ais.Count; i++) ais[i].OnGameStart();
+
             currPlayerIndex = -1;
             NextStep(ChessAction.NULL);
         }
