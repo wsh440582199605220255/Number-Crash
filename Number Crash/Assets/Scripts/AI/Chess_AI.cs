@@ -9,8 +9,8 @@ namespace MainLogic.AI
     public abstract class Chess_AI : MonoBehaviour
     {
         public Group group;
-        [SerializeField] protected List<Chess> myChess;
-        protected List<Chess> targets;
+        [SerializeField] protected List<Chess> myChess = new List<Chess>();
+        protected List<Chess> targets = new List<Chess>();
 
         public virtual void OnGameStart()
         {
