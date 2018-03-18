@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b997b132eec195444b95d64e6776a0f8
+timeCreated: 1513938716
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HYShiGuangTiW
+  fontNames:
+  - HYShiGuangTiW
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

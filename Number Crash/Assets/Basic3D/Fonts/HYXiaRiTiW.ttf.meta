@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4e18c02b8aae3864787fdfca67e55161
+timeCreated: 1513938869
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HYXiaRiTiW
+  fontNames:
+  - HYXiaRiTiW
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
